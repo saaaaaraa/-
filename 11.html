@@ -1,0 +1,92 @@
+<!doctype html>
+<head>
+<title>6차시 과제</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+
+function sum_cal() 
+{
+  var sum = 0;
+  var i = 1;
+  var calculation = "";
+  while (i <= 100) {
+
+    sum = sum + i
+    i= i+1
+
+    calculation = calculation +sum +  "<br>"
+    document.getElementById("sum").innerHTML = sum;
+    document.getElementById("calculation").innerHTML = calculation;
+
+  }  
+}
+
+
+function sum_cal3() 
+{
+  var sum = 0;
+  var i = 100;
+  var calculation = "";
+  while (i >= 1) {
+
+  
+
+    calculation = calculation + i +  "<br>"
+    document.getElementById("sum").innerHTML = sum;
+    document.getElementById("calculation").innerHTML = calculation;
+    i= i-1
+  }  
+}
+
+
+function sum_cal4() 
+{
+  var sum = 0;
+  var i = 1;
+  var calculation = "";
+  while (i <= 100) {
+
+    if(i%2==0){
+
+      calculation = "<font color =red>" + calculation + i +  "</font><br>"
+    }
+    else{
+      calculation = "<font color =black>" + calculation + i +  "</font><br>"
+    }
+    document.getElementById("sum").innerHTML = sum;
+    document.getElementById("calculation").innerHTML = calculation;
+    i= i+1
+  }  
+}
+
+
+</script>
+
+  <h1><a href="index.html">WEB</a></h1>
+
+  <div id="grid">
+    <ol>
+      <li><a href="1.html" class="saw">HTML</a></li>
+      <li><a href="2.html" class="saw" id="active" >CSS</a></li>
+      <li><a href="3.html" style="color: cornflowerblue;">JavaScript</a></li>
+      <li><a href="4.html" >구구단</a></li>
+    </ol>
+    
+    <div id="article">
+    
+      
+<button onclick="sum_cal()">1-100 더하기</button>
+<button onclick="sum_cal3()">100-1 거꾸로</button>
+<button onclick="sum_cal4()">1-100 홀짝 컬러</button>
+<p>합계: <span id="sum"></span></p>
+
+<p>계산 과정:</p>
+<span id="calculation"></span>
+
+</div>
+
+</body>
+
